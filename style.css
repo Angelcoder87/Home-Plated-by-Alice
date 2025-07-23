@@ -1,0 +1,225 @@
+:root {
+    --bg-color: var(--off-white);
+    --text-color: #4e3838;
+    --highlight: #ff7f50;
+    --accent: #022020;
+    --deep: #0a343f;
+    --off-white: #f9f6f0;
+    --blue: #7fd8be;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark {
+    --bg-color: #eee7e6;
+    --text-color: #e7dfdf;
+    --accent: #912a0b;
+    --off-white: #e6e3eb;
+  }
+  
+  /* Hero Background Wrapper */
+  .hero-wrapper {
+    background-image: url("Images/Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  /* Header and Navigation */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+  }
+  
+  header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    margin: 0.5rem 19rem 0.5rem 1rem; 
+    text-align: right; /* optional: aligns text inside h1 */
+    color: var(--blue);
+    text-shadow: 1px 1px 5px black;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0.5rem 19rem 0.5rem 1rem;;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--highlight);
+  }
+  
+  /* Dark Mode Toggle Button */
+  #darkModeToggle {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--highlight);
+  }
+  
+  /* Hero Section Content */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 1rem;
+    text-shadow: 1px 1px 5px black;
+  }
+  
+  .hero-text {
+    max-width: 500px;
+    margin-right: 2rem;
+  }
+  
+  .hero-text h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    color: var(--text-color);
+  }
+  
+  .hero-text span {
+    color: var(--highlight);
+  }
+  p {
+    font-size: 25px;
+  }
+  
+  /* About Section */
+  .about {
+    font-family: 'Pacifico', cursive;
+    background-color: var(--blue);
+    color: var(--off-white);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--deep);
+  }
+  
+  /* Contact Section */
+  .contact-info {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-info h2 {
+    color: var(--deep);
+  }
+  
+  .contact-info a {
+    color: var(--highlight);
+    text-decoration: none;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .services {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--deep);
+    margin-bottom: 2rem;
+  }
+
+  .service {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    align-items: center;
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .service:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .service img {
+    flex: 1 1 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 1rem;
+    object-fit: cover;
+  }
+
+  .service-content {
+    flex: 2;
+    padding: 1rem;
+  }
+
+  .service-content h3 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+
+  .service-content p {
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #eee;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    .service {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .service:nth-child(even) {
+      flex-direction: column;
+    }
+
+    .service-content {
+      padding: 0;
+    }
+  }
